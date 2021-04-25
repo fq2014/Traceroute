@@ -59,7 +59,7 @@ def build_packet():
     header = struct.pack("bbHHh", ICMP_ECHO_REQUEST, 0, my_checksum, my_id, 1)
     data = struct.pack("d", time.time())
     # Calculate the checksum on the data and the dummy header.
-    my_checksum = my_checksum(header + data)
+    my_checksum = checksum(header + data)
     
     if sys.platform == 'darwin':
         # Convert 16-bit integers from host to network  byte order
@@ -97,7 +97,7 @@ def get_route(hostname):
             mySocket = socket(AF_INET, SOCK_RAW, ping)
             #Fill in end
 
-
+            my_list =[]
             mySocket.setsockopt(IPPROTO_IP, IP_TTL, struct.pack('I', ttl))
             mySocket.settimeout(TIMEOUT)
             try:
@@ -134,11 +134,11 @@ def get_route(hostname):
                 #Fill in end
                 try: #try to fetch the hostname
                     #Fill in start
-                    hostname = socket.gethostbyaddr(addr[0])
+                    domainname = gethostbyaddr(addr[0])
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
                     #Fill in start
-                    hostname = ["hostname not returnable"]
+                    doaminname = ["hostname not returnable"]
                     #Fill in end
 
 
