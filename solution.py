@@ -134,11 +134,11 @@ def get_route(hostname):
                 #Fill in end
                 try: #try to fetch the hostname
                     #Fill in start
-                    hostname = gethostbyaddr(addr[0])
+                    domainname = gethostbyaddr(addr[0])
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
                     #Fill in start
-                    hostname = ["hostname not returnable"]
+                    doaminname = ["hostname not returnable"]
                     #Fill in end
 
 
@@ -151,7 +151,7 @@ def get_route(hostname):
                     my_list.append(str(ttl)+" ")
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
-                    my_list.append(hostname[0])
+                    my_list.append(domainname[0])
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print(my_list)
@@ -165,7 +165,7 @@ def get_route(hostname):
                     my_list.append(str(ttl)+" ")
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
-                    my_list.append(hostname[0])
+                    my_list.append(domainname[0])
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print(my_list)
@@ -179,7 +179,7 @@ def get_route(hostname):
                     my_list.append(str(ttl)+" ")
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
-                    my_list.append(hostname[0])
+                    my_list.append(domainname[0])
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print(my_list)
@@ -197,4 +197,4 @@ def get_route(hostname):
                 break
             finally:
                 mySocket.close()
-##get_route("www.youtube.com")
+get_route("www.youtube.com")
