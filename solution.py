@@ -138,7 +138,7 @@ def get_route(hostname):
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
                     #Fill in start
-                    doaminname = ["hostname not returnable"]
+                    domainnname = ["hostname not returnable"]
                     #Fill in end
 
 
