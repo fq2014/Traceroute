@@ -136,9 +136,9 @@ def get_route(hostname):
                     #Fill in start
                     domainname = gethostbyaddr(addr[0])
                     #Fill in end
-                except herror:   #if the host does not provide a hostname
+                except error:   #if the host does not provide a hostname
                     #Fill in start
-                    domainnname = ["hostname not returnable"]
+                    domainname = ["hostname not returnable"]
                     #Fill in end
 
 
