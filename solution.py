@@ -152,7 +152,7 @@ def get_route(hostname):
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
                     my_list.append(domainname[0])
-                    tracelist1.append(my_list)
+                    tracelist1.insert(my_list)
                     tracelist2.append(tracelist1)
                     #print(my_list)
                     my_list.clear()
@@ -166,7 +166,7 @@ def get_route(hostname):
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
                     my_list.append(domainname[0])
-                    tracelist1.append(my_list)
+                    tracelist1.insert(my_list)
                     tracelist2.append(tracelist1)
                     #print(my_list)
                     my_list.clear()
@@ -180,7 +180,7 @@ def get_route(hostname):
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
                     my_list.append(domainname[0])
-                    tracelist1.append(my_list)
+                    tracelist1.insert(my_list)
                     tracelist2.append(tracelist1)
                     #print(my_list)
                     my_list.clear()
@@ -188,11 +188,11 @@ def get_route(hostname):
                 else:
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your list here
-                    #my_list.append("error")
-                    #tracelist1.append(my_list)
-                    #tracelist2.append(tracelist1)
+                    my_list.append("error")
+                    tracelist1.insert(my_list)
+                    tracelist2.append(tracelist1)
                     #print(my_list)
-                    #my_list.clear()
+                    my_list.clear()
                     #Fill in end
                 break
             finally:
