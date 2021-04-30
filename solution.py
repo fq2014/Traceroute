@@ -97,7 +97,7 @@ def get_route(hostname):
             mySocket = socket(AF_INET, SOCK_RAW, ping)
             #Fill in end
 
-            
+            my_list =[]
             mySocket.setsockopt(IPPROTO_IP, IP_TTL, struct.pack('I', ttl))
             mySocket.settimeout(TIMEOUT)
             try:
@@ -127,7 +127,6 @@ def get_route(hostname):
 
 
             else:
-                my_list =[]
                 #Fill in start
                 #Fetch the icmp type from the IP packet
                 ping_header = recvPacket[20:28]
