@@ -134,9 +134,9 @@ def get_route(hostname):
                 #Fill in end
                 try: #try to fetch the hostname
                     #Fill in start
-                    domainname = gethostbyaddr(addr[0])
+                    domainname = gethostbyaddr(str(addr[0]))
                     #Fill in end
-                except error:   #if the host does not provide a hostname
+                except herror:   #if the host does not provide a hostname
                     #Fill in start
                     domainname = ["hostname not returnable"]
                     #Fill in end
@@ -152,9 +152,9 @@ def get_route(hostname):
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
                     my_list.append(domainname[0])
-                    tracelist1.insert(-1, my_list)
+                    tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    #print(my_list)
+                    print(my_list)
                     my_list.clear()
                     #Fill in end
                 elif types == 3:
@@ -166,9 +166,9 @@ def get_route(hostname):
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
                     my_list.append(domainname[0])
-                    tracelist1.insert(-1, my_list)
+                    tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    #print(my_list)
+                    print(my_list)
                     my_list.clear()
                     #Fill in end
                 elif types == 0:
@@ -180,21 +180,21 @@ def get_route(hostname):
                     my_list.append(str((timeReceived -t)*1000) +"ms ")
                     my_list.append(str(addr[0]+" "))
                     my_list.append(domainname[0])
-                    tracelist1.insert(-1, my_list)
+                    tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    #print(my_list)
+                    print(my_list)
                     my_list.clear()
                     #Fill in end
                 else:
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your list here
                     my_list.append("error")
-                    tracelist1.insert(-1, my_list)
+                    tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    #print(my_list)
+                    print(my_list)
                     my_list.clear()
                     #Fill in end
                 break
             finally:
                 mySocket.close()
-#get_route("www.youtube.com")
+get_route("www.youtube.com")
