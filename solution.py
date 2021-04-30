@@ -136,7 +136,7 @@ def get_route(hostname):
                     #Fill in start
                     domainname = gethostbyaddr(addr[0])
                     #Fill in end
-                except herror:   #if the host does not provide a hostname
+                except error:   #if the host does not provide a hostname
                     #Fill in start
                     domainname = ["hostname not returnable"]
                     #Fill in end
@@ -188,11 +188,11 @@ def get_route(hostname):
                 else:
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your list here
-                    my_list.append("error")
-                    tracelist1.append(my_list)
-                    tracelist2.append(tracelist1)
+                    #my_list.append("error")
+                    #tracelist1.append(my_list)
+                    #tracelist2.append(tracelist1)
                     #print(my_list)
-                    my_list.clear()
+                    #my_list.clear()
                     #Fill in end
                 break
             finally:
