@@ -1,4 +1,3 @@
-﻿
 from socket import *
 import os
 import sys
@@ -134,7 +133,7 @@ def get_route(hostname):
                 #Fill in end
                 try: #try to fetch the hostname
                     #Fill in start
-                    domainname = gethostbyaddr(addr[0])
+                    domainname = gethostbyaddr(str(addr[0]))
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
                     #Fill in start
@@ -154,7 +153,7 @@ def get_route(hostname):
                     my_list.append(domainname[0])
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    print(my_list)
+                    #print(my_list)
                     my_list.clear()
                     #Fill in end
                 elif types == 3:
@@ -168,7 +167,7 @@ def get_route(hostname):
                     my_list.append(domainname[0])
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    print(my_list)
+                    #print(my_list)
                     my_list.clear()
                     #Fill in end
                 elif types == 0:
@@ -182,7 +181,7 @@ def get_route(hostname):
                     my_list.append(domainname[0])
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    print(my_list)
+                    #print(my_list)
                     my_list.clear()
                     #Fill in end
                 else:
@@ -191,10 +190,11 @@ def get_route(hostname):
                     my_list.append("error")
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
-                    print(my_list)
+                    #print(my_list)
                     my_list.clear()
                     #Fill in end
                 break
             finally:
                 mySocket.close()
 get_route("www.youtube.com")
+
