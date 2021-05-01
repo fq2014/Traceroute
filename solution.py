@@ -156,6 +156,7 @@ def get_route(hostname):
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print (my_list)
+                    return tracelist2
                     my_list.clear()
                     #Fill in end
                 elif types == 3:
@@ -171,6 +172,7 @@ def get_route(hostname):
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print (my_list)
+                    return tracelist2
                     my_list.clear()
                     #Fill in end
                 elif types == 0:
@@ -186,6 +188,7 @@ def get_route(hostname):
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print (my_list)
+                    return tracelist2
                     my_list.clear()
                     #Fill in end
                 else:
