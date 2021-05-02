@@ -199,7 +199,7 @@ def get_route(hostname):
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print (my_list)
-                    return my_list
+                    #return my_list
                     my_list.clear()
                     #Fill in end
                 break
