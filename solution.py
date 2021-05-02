@@ -160,7 +160,7 @@ def get_route(hostname):
                     my_list.clear()
                     #Fill in end
                 elif types == 3:
-                    tracelist1 = []
+                    #tracelist1 = []
                     bytes = struct.calcsize("d")
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
@@ -176,7 +176,7 @@ def get_route(hostname):
                     my_list.clear()
                     #Fill in end
                 elif types == 0:
-                    tracelist1 = []
+                    #tracelist1 = []
                     bytes = struct.calcsize("d")
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
@@ -192,7 +192,7 @@ def get_route(hostname):
                     my_list.clear()
                     #Fill in end
                 else:
-                    tracelist1 = []
+                    #tracelist1 = []
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your list here
                     my_list.append("error")
