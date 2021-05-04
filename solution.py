@@ -134,7 +134,8 @@ def get_route(hostname):
                 #Fill in end
                 try: #try to fetch the hostname
                     #Fill in start
-                    domainname = gethostbyaddr(str(addr[0]))
+                   # domainname = gethostbyaddr(str(addr[0]))
+                    domainname = gethostbyaddr(addr[0])
                     #Fill in end
                 except herror:   #if the host does not provide a hostname
                     #Fill in start
@@ -148,7 +149,7 @@ def get_route(hostname):
                     #Fill in start
                     #You should add your responses to your lists here
                     #my_list.append(str(ttl)+" ")
-                    my_list.append(str(int((timeReceived -t)*1000)) +"ms")
+                    my_list.append(str((timeReceived -t)*1000) +"ms")
                     my_list.append(str(addr[0]))
                     my_list.append(domainname[0])
                     tracelist1.append(my_list)
@@ -162,7 +163,7 @@ def get_route(hostname):
                     #Fill in start
                     #You should add your responses to your lists here 
                     #my_list.append(str(ttl)+" ")
-                    my_list.append(str(int((timeReceived -t)*1000)) +"ms")
+                    my_list.append(str((timeReceived -t)*1000) +"ms")
                     my_list.append(str(addr[0]))
                     my_list.append(domainname[0])
                     tracelist1.append(my_list)
@@ -176,7 +177,7 @@ def get_route(hostname):
                     #Fill in start
                     #You should add your responses to your lists here and return your list if your destination IP is met
                     #my_list.append(str(ttl)+" ")
-                    my_list.append(str(int((timeReceived -t)*1000)) +"ms")
+                    my_list.append(str((timeReceived -t)*1000) +"ms")
                     my_list.append(str(addr[0]))
                     my_list.append(domainname[0])
                     tracelist1.append(my_list)
