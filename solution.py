@@ -142,15 +142,12 @@ def get_route(hostname):
                     # Fill in start
                     # You should add your responses to your lists here
                     # my_list.append(str(ttl)+" ")
-
-
-                    my_list.insert(-1, addr[0])
-                    my_list.insert(-1, domainname[0])
-                    my_list.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
-                    tracelist1.append(my_list)
+                    tracelist1.append(domainname[0])
+                    tracelist1.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
+                    tracelist1.insert(-1, addr[0])
                     tracelist2.append(tracelist1)
                     #print(my_list)
-                    my_list.clear()
+                    #my_list.clear()
                     # Fill in end
                 elif types == 3:
                     bytes = struct.calcsize("d")
@@ -158,13 +155,12 @@ def get_route(hostname):
                     # Fill in start
                     # You should add your responses to your lists here
                     # my_list.append(str(ttl)+" ")
-                    my_list.insert(-1, addr[0])
-                    my_list.insert(-1, domainname[0])
-                    my_list.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
-                    tracelist1.append(my_list)
+                    tracelist1.append(domainname[0])
+                    tracelist1.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
+                    tracelist1.insert(-1, addr[0])
                     tracelist2.append(tracelist1)
                     #print(my_list)
-                    my_list.clear()
+                    #my_list.clear()
                     # Fill in end
                 elif types == 0:
                     bytes = struct.calcsize("d")
@@ -172,23 +168,18 @@ def get_route(hostname):
                     # Fill in start
                     # You should add your responses to your lists here and return your list if your destination IP is met
                     # my_list.append(str(ttl)+" ")
-                    my_list.insert(-1, addr[0])
-                    my_list.insert(-1, domainname[0])
-                    my_list.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
-                    tracelist1.append(my_list)
+                    tracelist1.append(domainname[0])
+                    tracelist1.insert(-1, str(int((timeReceived - t) * 1000)) + "ms")
+                    tracelist1.insert(-1, addr[0])
                     tracelist2.append(tracelist1)
                     #print(my_list)
-                    my_list.clear()
+                    #my_list.clear()
                     return tracelist2
                     # Fill in end
                 else:
                     # Fill in start
                     # If there is an exception/error to your if statements, you should append that to your list here
-                    my_list.append("error")
-                    tracelist1.append(my_list)
-                    tracelist2.append(tracelist1)
-                    # print(my_list)
-                    my_list.clear()
+                    print('Error')
                     # Fill in end
                 break
             finally:
