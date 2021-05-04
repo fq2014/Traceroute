@@ -1,3 +1,4 @@
+﻿
 from socket import *
 import os
 import sys
@@ -159,6 +160,7 @@ def get_route(hostname):
                     my_list.clear()
                     #Fill in end
                 elif types == 3:
+                    #tracelist1 = []
                     bytes = struct.calcsize("d")
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
@@ -171,24 +173,36 @@ def get_route(hostname):
                     tracelist2.append(tracelist1)
                     #print (my_list)
                     #return tracelist2
-                    my_list.clear() 
+                    my_list.clear()
                     #Fill in end
                 elif types == 0:
+                    #tracelist1 = []
                     bytes = struct.calcsize("d")
                     timeSent = struct.unpack("d", recvPacket[28:28 + bytes])[0]
                     #Fill in start
                     #You should add your responses to your lists here and return your list if your destination IP is met
+                    my_list.append(str(ttl)+" ")
+                    my_list.append(str((timeReceived -t)*1000) +"ms ")
+                    my_list.append(str(addr[0]+" "))
+                    my_list.append(domainname[0])
+                    tracelist1.append(my_list)
+                    tracelist2.append(tracelist1)
+                    #print (my_list)
+                    return tracelist2
+                    my_list.clear()
                     #Fill in end
                 else:
+                    #tracelist1 = []
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your list here
                     my_list.append("error")
                     tracelist1.append(my_list)
                     tracelist2.append(tracelist1)
                     #print (my_list)
-                    return my_list
+                    #return my_list
                     my_list.clear()
                     #Fill in end
                 break
             finally:
                 mySocket.close()
+#get_route("www.yahoo.com")
